@@ -2,7 +2,7 @@
 {
     public static void Main (string[] args)
     {
-        bool isRunning = true;
+        bool isRunning = true; 
 
         while (isRunning)
         {
