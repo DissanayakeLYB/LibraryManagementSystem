@@ -9,9 +9,14 @@
             
             Console.WriteLine("Library Management System\n");
             
-            Console.WriteLine("1. Register");
-            Console.WriteLine("2. Login");
-            Console.WriteLine("3. Exit");
+            Console.WriteLine("1. Add books");
+            Console.WriteLine("2. View available books");
+            Console.WriteLine("3. Lend books");
+            Console.WriteLine("4. Search books");
+            Console.WriteLine("5. Return books");
+            Console.WriteLine("6. Register members");
+            Console.WriteLine("7. Search members");
+            Console.WriteLine("8. Exit");
 
             Console.Write("Enter the number: ");
             var actionNumber = Console.ReadLine();
@@ -21,14 +26,34 @@
             switch(actionNumber)
             {
                 case "1":
-                    Console.WriteLine("Registered Successfully!!!\n");
+                    Books.DisplayAvailableBooks();
                     break;
 
                 case "2":
-                    Console.WriteLine("Logged In Successfuly!!!\n");
+                    Console.WriteLine("");
                     break;
 
                 case "3":
+                    Console.WriteLine("");
+                    break;
+
+                case "4":
+                    Console.WriteLine("");
+                    break;
+
+                case "5":
+                    Console.WriteLine("");
+                    break;
+
+                case "6":
+                    Console.WriteLine("");
+                    break;
+
+                case "7":
+                    Console.WriteLine("");
+                    break;
+
+                case "8":
                     Console.WriteLine("Exiting...\n");
                     Console.WriteLine("Successfully Exited!!!");
                     isRunning = false;
