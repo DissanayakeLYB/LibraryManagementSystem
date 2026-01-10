@@ -26,7 +26,7 @@
             switch(actionNumber)
             {
                 case "1":
-                    Books.DisplayAvailableBooks();
+                    Console.WriteLine("");
                     break;
 
                 case "2":
