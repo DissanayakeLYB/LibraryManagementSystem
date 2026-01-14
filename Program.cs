@@ -1,6 +1,7 @@
 ﻿class Program
 {
     public static void Main (string[] args)
+    
     {
         bool isRunning = true; 
 
@@ -26,31 +27,64 @@
             switch(actionNumber)
             {
                 case "1":
-                    Console.WriteLine("");
+                    Console.Write("Enter book title: ");
+                    string title = Console.ReadLine();
+                    Console.Write("Enter author name: ");
+                    string author = Console.ReadLine();
+                    Console.Write("Enter ISBN: ");
+                    string isbn = Console.ReadLine();
+                    Book.AddBook(title, author, isbn);
+                    Console.WriteLine();
                     break;
 
                 case "2":
-                    Console.WriteLine("");
+                    Book.ViewAllBooks();
+                    Console.WriteLine();
                     break;
 
                 case "3":
-                    Console.WriteLine("");
+                    Book.ViewAllBooks();
+                    Console.Write("Enter book ID to lend: ");
+                    if (int.TryParse(Console.ReadLine(), out int lendBookId))
+                    {
+                        // TODO: Implement lend functionality (mark book as unavailable)
+                        Console.WriteLine("Lend functionality to be implemented.\n");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid book ID.\n");
+                    }
                     break;
 
                 case "4":
-                    Console.WriteLine("");
+                    Console.Write("Search by (title/author/isbn): ");
+                    string searchType = Console.ReadLine();
+                    Console.Write("Enter search term: ");
+                    string searchTerm = Console.ReadLine();
+                    Book.SearchBooks(searchTerm, searchType);
+                    Console.WriteLine();
                     break;
 
                 case "5":
-                    Console.WriteLine("");
+                    Book.ViewAllBooks();
+                    Console.Write("Enter book ID to return: ");
+                    if (int.TryParse(Console.ReadLine(), out int returnBookId))
+                    {
+                        // TODO: Implement return functionality (mark book as available)
+                        Console.WriteLine("Return functionality to be implemented.\n");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid book ID.\n");
+                    }
                     break;
 
                 case "6":
-                    Console.WriteLine("");
+                    Console.WriteLine("Register members - functionality to be implemented.\n");
                     break;
 
                 case "7":
-                    Console.WriteLine("");
+                    Console.WriteLine("Search members - functionality to be implemented.\n");
                     break;
 
                 case "8":
