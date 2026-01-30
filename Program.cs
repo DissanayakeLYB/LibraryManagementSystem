@@ -31,10 +31,6 @@
                     Books.ReturnBook();
                     break;
 
-                case "5":
-                    Loans.ViewReports();
-                    break;
-
                 case "0":
                     isLibraryOpen = false;
                     Console.WriteLine("Exiting the system. Goodbye!\n");
@@ -55,7 +51,6 @@
         Console.WriteLine( "2 - Manage members" );
         Console.WriteLine( "3 - Borrow book" );
         Console.WriteLine( "4 - Return book" );
-        Console.WriteLine( "5 - View reports" );
         Console.WriteLine( "0 - Exit" );
     }
 
